@@ -1,12 +1,13 @@
 -- Create schemas
 
 -- Create tables in the following order:
--- 1) Departments
--- 2) Dept_Employees
--- 3) Dept_Manager
--- 4) Employees
--- 5) Salaries
--- 6) Titles
+-- 1) Departments - departments.csv
+-- 2) Titles - titles.csv
+-- 3) Employees - employees.csv
+-- 4) Salaries - salaries.csv
+-- 5) Dept_Employees - dept_emp.csv
+-- 6) Dept_Manager - dept_manager.csv
+
 
 CREATE TABLE IF NOT EXISTS departments
 (
@@ -15,16 +16,11 @@ CREATE TABLE IF NOT EXISTS departments
     PRIMARY KEY(dept_no)
 );
 
-CREATE TABLE IF NOT EXISTS dept_employees
+CREATE TABLE IF NOT EXISTS titles
 (
-    emp_no INTEGER NOT NULL,
-    dept_no VARCHAR(4) NOT NULL    
-);
-
-CREATE TABLE IF NOT EXISTS dept_manager
-(
-    dept_no VARCHAR(4) NOT NULL,
-    emp_no INTEGER NOT NULL    
+    title_id VARCHAR(5) NOT NULL UNIQUE,
+    title VARCHAR(30) NOT NULL,
+    PRIMARY KEY(title_id)
 );
 
 CREATE TABLE IF NOT EXISTS employees
@@ -45,12 +41,18 @@ CREATE TABLE IF NOT EXISTS salaries
     salary INTEGER NOT NULL    
 );
 
-CREATE TABLE IF NOT EXISTS titles
+CREATE TABLE IF NOT EXISTS dept_employees
 (
-    title_id VARCHAR(5) NOT NULL UNIQUE,
-    title VARCHAR(30) NOT NULL,
-    PRIMARY KEY(title_id)
+    emp_no INTEGER NOT NULL,
+    dept_no VARCHAR(4) NOT NULL    
 );
+
+CREATE TABLE IF NOT EXISTS dept_manager
+(
+    dept_no VARCHAR(4) NOT NULL,
+    emp_no INTEGER NOT NULL    
+);
+
 
 
 -- Create FKs in the following order:
