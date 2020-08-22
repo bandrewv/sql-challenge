@@ -38,19 +38,22 @@ CREATE TABLE IF NOT EXISTS employees
 CREATE TABLE IF NOT EXISTS salaries
 (
     emp_no INTEGER NOT NULL,
-    salary INTEGER NOT NULL    
+    salary INTEGER NOT NULL,
+    PRIMARY KEY(emp_no, salary)
 );
 
 CREATE TABLE IF NOT EXISTS dept_employees
 (
     emp_no INTEGER NOT NULL,
-    dept_no VARCHAR(4) NOT NULL    
+    dept_no VARCHAR(4) NOT NULL,
+    PRIMARY KEY(emp_no, dept_no)
 );
 
 CREATE TABLE IF NOT EXISTS dept_manager
 (
     dept_no VARCHAR(4) NOT NULL,
-    emp_no INTEGER NOT NULL    
+    emp_no INTEGER NOT NULL,
+    PRIMARY KEY(dept_no, emp_no)
 );
 
 
