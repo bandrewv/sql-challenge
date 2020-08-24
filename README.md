@@ -1,2 +1,3 @@
-# sql-challenge
-Data Engineering/Data Analysis on Employee Data for Data Bootcamp Assignment
+# Week 9 HW Assignment - SQL-Challenge
+
+## 
