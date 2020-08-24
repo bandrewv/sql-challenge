@@ -1,6 +1,4 @@
 # Week 9 HW Assignment - SQL-Challenge
 
 ## Data Engineering
-* After reviewing the tables in each of the attached .csv files, I visted genmymodel.com to set up an ERD and generate a schema for my relational database.
-
-* [Visualizations](Visualizations/) - this folder images of the various plots created during analysis
+* After reviewing the tables in each of the attached .csv files, I visted genmymodel.com to set up an [ERD](/EmployeeSQL/SQL_Challenge_Schema_Diagram.png) and generate a schema for my relational database.
